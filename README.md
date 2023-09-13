@@ -9,7 +9,7 @@ This is a flutter application serving as a comprehensive CV, showcasing personal
     - flutter pub get
     - flutter run
 3. For virtual testing of the app
-    - Appetize link:    
+    - Appetize link: https://appetize.io/app/me2n3rznt6mbzlij3nmhlptuf4    
 
 # Screenshots
 
