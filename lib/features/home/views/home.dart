@@ -1,16 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:hng_stage_two/commons/models/user_model.dart';
 import 'package:hng_stage_two/commons/services/dummy_data.dart';
 import 'package:hng_stage_two/features/edit/views/edit.dart';
 import 'package:hng_stage_two/features/home/widgets/text_widget.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final data = dummydata[0];
-    // final List experiences = data.experience ?? [];
+  State<Home> createState() => _HomeState();
+}
 
+class _HomeState extends State<Home> {
+  User data = dummydata[0];
+
+  void updateUserData(User newUser) {
+    setState(() {
+      // Update the user data in the Home widget
+      data = newUser;
+    });
+  }
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -20,7 +31,11 @@ class Home extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.of(context).push(MaterialPageRoute(builder: (context) => const EditPage()));
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => EditPage(
+                user: data,
+                updateUserDataCallback: updateUserData,
+              )));
         },
         backgroundColor: Colors.black54,
         child: const Icon(Icons.edit_outlined),
@@ -35,16 +50,13 @@ class Home extends StatelessWidget {
               children: [
                 // Contacts...
                 contacts(
-                  phoneNumber: '${data.phoneNumber}',
-                  githubLink: data.github,
-                  slackName: data.slack
-                ),
+                    phoneNumber: data.phoneNumber,
+                    githubLink: data.github,
+                    slackName: data.slack),
                 const SizedBox(height: 40),
 
                 // About Me...
-                aboutMe(
-                  aboutContent: data.aboutMe
-                ),
+                aboutMe(aboutContent: data.aboutMe),
                 const SizedBox(height: 40),
 
                 // Skills

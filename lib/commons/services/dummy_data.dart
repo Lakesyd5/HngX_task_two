@@ -4,7 +4,7 @@ import 'package:hng_stage_two/commons/models/user_model.dart';
 
 List <User> dummydata = [
   User(
-    phoneNumber: 07018434222,
+    phoneNumber: '07018434222',
     github: 'https://github.com/Lakesyd5',
     slack: 'Adeleke Ojedokun',
     aboutMe: 'Skilled and passionate Flutter developer with expertise in Dart and the Flutter framework. Excels in creating responsive UI designs, implementing features, and optimizing app performance. Effective communicator, collaborative team player, and logical problem solver. Committed to continuous learning and contributing to impactful Flutter projects.',

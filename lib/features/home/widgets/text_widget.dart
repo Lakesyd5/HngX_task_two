@@ -6,9 +6,9 @@ Widget aboutMe({String? aboutContent}) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text(
+      const Text(
         'About Me',
-        style: const TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+        style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
       ),
       const Divider(color: Colors.black54, endIndent: 50,),
       const SizedBox(height: 10),

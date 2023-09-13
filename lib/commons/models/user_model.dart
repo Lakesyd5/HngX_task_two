@@ -8,7 +8,7 @@ class User {
     this.experience
   });
   
-  num? phoneNumber;
+  String? phoneNumber;
   String? slack;
   String? github;
   String? aboutMe;
