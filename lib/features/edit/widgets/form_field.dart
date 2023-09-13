@@ -27,8 +27,10 @@ TextField numberFormField({TextEditingController? controller}) {
     ),
     autocorrect: false,
     inputFormatters: [
-      FilteringTextInputFormatter.digitsOnly
+      FilteringTextInputFormatter.digitsOnly,
+      LengthLimitingTextInputFormatter(11), 
     ],
+    keyboardType: TextInputType.phone,
   );
 }
 

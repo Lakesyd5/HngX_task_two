@@ -1,16 +1,26 @@
-# hng_stage_two
+# HngX Task Two
 
-A new Flutter project.
+This is a flutter application serving as a comprehensive CV, showcasing personal and professional details. The app allow both viewing and editing of the provided CV information.
 
 ## Getting Started
+1. Make sure you have Flutter and Dart installed on your system.
+2. Clone the repository and run the following commands:
+    - flutter clean
+    - flutter pub get
+    - flutter run
+3. For virtual testing of the app
+    - Appetize link:    
 
-This project is a starting point for a Flutter application.
+# Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+<h3>Home page</h3>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<div>
+  <img width="300" alt="Home" src="assets/screenshots/home_page.png">
+</div>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<h3>Edit page</h3>
+
+<div>
+  <img width="300" alt="Edit" src="assets/screenshots/edit_page.png">
+</div>
